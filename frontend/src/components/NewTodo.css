@@ -5,7 +5,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main{
+.main {
   min-height: 100vh;
   background: #f5f7fa;
   display: flex;
@@ -277,4 +277,39 @@ Link:hover {
 
 .main2 .container {
   animation: fadeIn 0.3s ease-in-out;
+}
+@media (max-width: 400px) {
+  .main {
+    height: 100vh;
+    width: 450px;
+  }
+  .container {
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .cont-inp {
+    max-width: 330px;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .cont-add {
+    max-width: 330px;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .cont-inp input[type="text"]{
+    padding: 0.45rem 0.8rem;
+    font-size: 12px;
+    width: 150px;
+  }
+  .cont-inp textarea{
+    padding: 0.45rem 0.8rem;
+    font-size: 12px;
+    width: 150px;
+  }
+  .cont-add select{
+    padding: 0.45rem 0.8rem;
+    font-size: 12px;
+    width: 150px;
+  }
 }

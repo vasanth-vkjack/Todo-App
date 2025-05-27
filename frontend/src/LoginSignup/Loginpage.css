@@ -53,9 +53,10 @@
   font-weight: 600;
   cursor: pointer;
 }
-@media(max-width:800px){
+@media(max-width:500px){
     .loginsignup-container{
-        width: 450px;
+        width: 350px;
+        height: 500px;
         padding: 20px 30px;
     }
     .loginsignup-container h1{

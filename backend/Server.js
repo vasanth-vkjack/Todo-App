@@ -4,7 +4,7 @@ const cors = require("cors");
 const app = express();
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 require("dotenv").config();
 
@@ -45,7 +45,7 @@ app.post("/signup", async (req, res) => {
 
   const data = { user: { id: user.id } };
   console.log(data)
-  const token = jwt.sign({ email: user.email }, "Secret", { expiresIn: "1h" });
+  const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
   console.log(token);
   res.cookie("Token", token, {
@@ -70,7 +70,7 @@ app.post("/login", async (req, res) => {
     return res.json({ success: false, errors: "Invalid Password" });
   }
 
-  const token = jwt.sign({ email: user.email }, "Secret", { expiresIn: "1h" });
+  const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: "1h" });
   console.log(token);
   res.cookie("Token", token, {
     httpOnly: true,
@@ -88,7 +88,7 @@ app.get("/profile", (req, res) => {
     return res.status(401).json({ success: false, error: "No token provided" });
 
   try {
-    const decoded = jwt.verify(token, "Secret");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     console.log(decoded);
     res.json({ success: true, email: decoded.email });
   } catch (err) {
@@ -111,7 +111,7 @@ const authenticateUser = async (req, res, next) => {
     return res.status(401).json({ success: false, error: "Unauthorized" });
 
   try {
-    const decoded = jwt.verify(token, "Secret");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     console.log("reult", decoded);
     req.email = decoded.email;
     next();
