@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    padding: 20px 50px;
+    background-color: rgb(205, 208, 210);
+}
+.main2{
+    background-color: rgb(205, 208, 210);
+}
+body{
+    display: flex;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 30px;
+}
+.container h1{
+    align-items: center;
+}
+.cont-inp{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+    margin: 30px 0 10px;
+    width: 380px;
+}
+.cont-inp input{
+    padding: 7px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    width: 45%;
+}
+.cont-inp textarea{
+    padding: 7px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    width: 45%;
+}
+.cont-add{
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.cont-add select{
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    width: 48%;
+}
+.cont-add button{
+    padding: 5px 50px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+.todos{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+.list li{
+    list-style: none;
+}
+.btn{
+    display: flex;
+    height: 25px;
+    margin-top: 6px;
+}
+.btn button{
+    margin-left: 10px;
+    border: none;
+    background-color: rgb(205, 208, 210);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-edit{
+    display: flex;
+    height: 25px;
+    margin-top: 6px;
+}
+.btn-edit button{
+    margin-left: 10px;
+    border: none;
+    background-color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Overlay to darken background */
+.main2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Centered modal */
+.main2 .container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* Button group */
+.btn-edit {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Optional: fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.main2 .container {
+  animation: fadeIn 0.3s ease-in-out;
+}
