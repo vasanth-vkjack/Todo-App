@@ -13,6 +13,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "http://localhost:3000",
+    // origin: "https://resplendent-beignet-2fdf22.netlify.app/",
     credentials: true,
   })
 );

@@ -278,7 +278,7 @@ Link:hover {
 .main2 .container {
   animation: fadeIn 0.3s ease-in-out;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .main {
     height: 100vh;
     width: 450px;
