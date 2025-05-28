@@ -21,6 +21,7 @@ const EditTodo = ({ todo, onClose, onSave }) => {
         <div className="cont-inp">
           <input
             value={newInput}
+            type="text"
             onChange={(e) => setNewInput(e.target.value)}
             placeholder="New Task"
           />
@@ -31,7 +32,7 @@ const EditTodo = ({ todo, onClose, onSave }) => {
             rows="1"
           />
         </div>
-        <div className="cont-add">
+        <div className="cont-adde">
           <select
             value={newStatus}
             onChange={(e) => setNewStatus(e.target.value)}

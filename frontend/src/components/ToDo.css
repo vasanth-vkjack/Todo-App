@@ -1,7 +1,8 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
-}
+} */
+/*  
 .main{
     padding: 20px 50px;
     background-color: rgb(205, 208, 210);
@@ -108,21 +109,21 @@ body{
     cursor: pointer;
 }
 /* Overlay to darken background */
-.main2 {
+/* .main2 {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
-}
+} */
 
 /* Centered modal */
-.main2 .container {
+/* .main2 .container {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -130,17 +131,17 @@ body{
   width: 90%;
   max-width: 500px;
   position: relative;
-}
+} */
 
 /* Button group */
-.btn-edit {
+/* .btn-edit {
   display: flex;
   gap: 10px;
   margin-top: 10px;
-}
+} */
 
 /* Optional: fade in animation */
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
     transform: scale(0.95);
@@ -153,4 +154,4 @@ body{
 
 .main2 .container {
   animation: fadeIn 0.3s ease-in-out;
-}
+}  */

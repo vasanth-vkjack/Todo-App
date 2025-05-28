@@ -34,7 +34,7 @@ export const Todo = () => {
   };
 
   const handleAdd = async () => {
-    await fetch("https://todo-app-qq79.onrender.com/save", {
+    await fetch("http://localhost:4000/save", {
       credentials: "include",
       method: "POST",
       headers: {
@@ -58,7 +58,7 @@ export const Todo = () => {
 
   const updateToDo = async (_id, updatedData) => {
     console.log(_id, updatedData);
-    await fetch(`https://todo-app-qq79.onrender.com/update/${_id}`, {
+    await fetch(`http://localhost:4000/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -85,7 +85,7 @@ export const Todo = () => {
   };
 
   const handleDelete = async (_id) => {
-    await fetch(`https://todo-app-qq79.onrender.com/delete/${_id}`, {
+    await fetch(`http://localhost:4000/delete/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -99,7 +99,7 @@ export const Todo = () => {
   };
 
   const logout = async () => {
-    const response = await fetch("https://todo-app-qq79.onrender.com/logout", {
+    const response = await fetch("http://localhost:4000/logout", {
       method: "POST",
       credentials: "include",
     });
