@@ -5,7 +5,7 @@ export const fetchTodos = createAsyncThunk(
   "/getTodos",
   async (_, { rejectWithValue }) => {
     try {
-      const res = await axios.get("https://todo-app-2pyr.onrender.com/todos", {
+      const res = await axios.get("http://localhost:4000/todos", {
         headers: {
           "Content-Type": "application/json",
         },
