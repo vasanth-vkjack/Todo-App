@@ -50,9 +50,9 @@ app.post("/signup", async (req, res) => {
 
   console.log(token);
   res.cookie("Token", token, {
-    httpOnly: true,
-    sameSite: "Lax",
-    secure: false,
+    // httpOnly: true,
+    // sameSite: "Lax",
+    // secure: false,
     maxAge: 60 * 60 * 1000,
   });
 
@@ -74,9 +74,9 @@ app.post("/login", async (req, res) => {
   const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: "1h" });
   console.log(token);
   res.cookie("Token", token, {
-    httpOnly: true,
-    sameSite: "Lax",
-    secure: false,
+    // httpOnly: true,
+    // sameSite: "Lax",
+    // secure: false,
     maxAge: 60 * 60 * 1000,
   });
 
